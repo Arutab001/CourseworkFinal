@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
 
@@ -30,13 +31,19 @@ const Home = (props) => {
             </div>
             <div className="home-middle">
               <div className="home-left">
-                <span className="navbar-link">SHOP</span>
+                <Link to="/catalog" className="home-text navbar-link">
+                  SHOP
+                </Link>
                 <span className="navbar-link">SPECIAL</span>
               </div>
               <span className="navbar-logo-title">ARTEM</span>
               <div className="home-right">
-                <span className="navbar-link">ABOUT</span>
-                <span className="navbar-link">CONTACT</span>
+                <a href="#about" className="home-text02 navbar-link">
+                  ABOUT
+                </a>
+                <a href="#contacts" className="home-text03 navbar-link">
+                  CONTACT
+                </a>
               </div>
             </div>
             <div className="home-icons">
@@ -103,22 +110,10 @@ const Home = (props) => {
           <div className="home-max-width max-width-container">
             <div className="home-hero1">
               <div className="home-container03">
-                <div className="home-info">
-                  <img
-                    alt="Rectangle43271305"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMicgaGVpZ2h0PSc1Micgdmlld0JveD0nMCAwIDIgNTInIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+CjxyZWN0IHdpZHRoPScyJyBoZWlnaHQ9JzUyJyBmaWxsPSdibGFjaycgZmlsbC1vcGFjaXR5PScwLjUnLz4KPC9zdmc+Cg=="
-                    className="home-image04"
-                  />
-                  <span className="home-text10">
-                    <span>furniture</span>
-                    <br></br>
-                    <span>trends - 2022</span>
-                  </span>
-                </div>
-                <h1 className="home-text14">Lenovo</h1>
+                <h1 className="home-text10">Lenovo</h1>
                 <div className="home-container04">
-                  <span className="home-text15">FROM</span>
-                  <span className="home-text16">$339</span>
+                  <span className="home-text11">FROM</span>
+                  <span className="home-text12">$339</span>
                 </div>
                 <div className="home-btn-group">
                   <button className="button">Buy</button>
@@ -126,7 +121,7 @@ const Home = (props) => {
               </div>
               <img
                 src="/playground_assets/laptop-transformed-600h.png"
-                className="home-image05"
+                className="home-image04"
               />
             </div>
           </div>
@@ -147,33 +142,39 @@ const Home = (props) => {
                 <img
                   alt="image"
                   src="/playground_assets/20220601160636730_igrovaya-pristavka-sony-ps5-with-disk-825gb-1-1800h.jpg"
-                  className="home-image06"
+                  className="home-image05"
                 />
-                <span className="home-text17">Came Consoles</span>
+                <span className="home-text13">Came Consoles</span>
               </div>
               <div className="home-category-card1">
                 <img
                   alt="image"
                   src="/playground_assets/msigeforcertx4090gamingxtrio24gbgddr6xrtx4090gamingxtrio24gb_1-1500w.jpg"
-                  className="home-image07"
+                  className="home-image06"
                 />
-                <span className="home-text18">PC components</span>
+                <span className="home-text14">PC components</span>
               </div>
               <CategoryCard
                 name="Laptops"
                 category_img="/playground_assets/%5Bremoval.ai%5D_tmp-64492e41bf8f4-1500w.png"
                 rootClassName="category-card-root-class-name3"
               ></CategoryCard>
-              <CategoryCard
-                name="Telephones"
-                category_img="/playground_assets/phone-1500w.jpg"
-                rootClassName="category-card-root-class-name1"
-              ></CategoryCard>
+              <div className="home-category-card2">
+                <img
+                  alt="image"
+                  src="/playground_assets/iphone-13-pink-select-2021-1800h.png"
+                  className="home-image07"
+                />
+                <span className="home-text15">
+                  <span>Smartphones</span>
+                  <br></br>
+                </span>
+              </div>
             </div>
           </div>
           <div className="home-banner">
             <div className="home-container05">
-              <h3 className="home-text19">
+              <h3 className="home-text18">
                 <span className="Heading-3">Artem</span>
                 <br></br>
                 <span>project</span>
@@ -181,30 +182,25 @@ const Home = (props) => {
               </h3>
             </div>
           </div>
-          <div className="home-container06 max-width-container">
+          <div id="about" className="home-container06 max-width-container">
             <div className="home-container07">
-              <span className="home-text24">
-                <span>
-                  Мой магазин предоставляет абсолютно новые неверноятные
-                  возможности для покупки компьютеров, телефонов, игровых
-                  приставок и т.д. Мы предоставляем гарантию на 5 лет на каждый
-                  наш товар, независимо от цены
-                </span>
-                <br></br>
+              <span className="home-text23">
+                <span>Some info about my shop.</span>
                 <br></br>
               </span>
-              <img
-                alt="M3271427"
-                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTk5JyBoZWlnaHQ9JzIwMCcgdmlld0JveD0nMCAwIDE5OSAyMDAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+CjxwYXRoIGQ9J00zNy4zMDI2IDcxLjI5MjVMOTkuMzgyNyAxODIuMzEzTDE2MS40NjMgNzEuMjkyNUwxNzUuNjIyIDIwMEgxOTguNzY1TDE3NS42MjIgMEw5OS4zODI3IDEzNy45NTlMMjMuMTQzOSAwTDAgMjAwSDIzLjE0MzlMMzcuMzAyNiA3MS4yOTI1WicgZmlsbD0nYmxhY2snIGZpbGwtb3BhY2l0eT0nMC4wNicvPgo8L3N2Zz4K"
-                className="home-svg"
-              />
               <button className="button">Read more</button>
             </div>
           </div>
         </div>
         <div className="home-trending-items section-container">
           <div className="home-max-width2 max-width-container">
-            <SectionHeading></SectionHeading>
+            <div className="home-section-heading">
+              <h1 className="home-text26 Heading-2">TRENDING ITEMS</h1>
+              <span className="home-text27">
+                Explore monthly most trending smartphones, laptops and the best
+                offers you can buy
+              </span>
+            </div>
             <div className="home-gallery">
               <div className="home-left1">
                 <div className="home-gallery-card">
@@ -475,7 +471,7 @@ const Home = (props) => {
       <div className="home-footer">
         <div className="max-width-container">
           <footer className="home-footer1">
-            <div className="home-container27">
+            <div id="contacts" className="home-container27">
               <h3 className="home-text47 Heading-3">ARTEM</h3>
               <span className="home-text48">
                 Volgogradskaya 34, 41, Minsk, Belarus, 220049
@@ -487,7 +483,7 @@ const Home = (props) => {
               <div className="home-container28">
                 <span className="home-text51">Categories</span>
                 <span className="home-text52">PC</span>
-                <span className="home-text53">Telephone</span>
+                <span className="home-text53">Smartphones</span>
                 <span className="home-text54">Laptops</span>
                 <span className="home-text55">Game Consoles</span>
                 <span className="home-text56">PC components</span>

@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './style.css'
 import Home from './views/home'
+import Catalog from './views/catalog'
 
 const App = () => {
   return (
     <Router>
       <div>
         <Route component={Home} exact path="/" />
+        <Route component={Catalog} exact path="/catalog" />
       </div>
     </Router>
   )
