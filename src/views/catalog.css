@@ -9,6 +9,7 @@
 }
 .catalog-header {
   width: 100%;
+  height: 209px;
   display: flex;
   max-width: var(--dl-size-size-maxwidth);
   align-items: center;
@@ -16,7 +17,7 @@
   padding-left: var(--dl-space-space-threeunits);
   padding-right: var(--dl-space-space-threeunits);
   flex-direction: column;
-  padding-bottom: var(--dl-space-space-twounits);
+  padding-bottom: 36px;
 }
 .catalog-separator {
   width: 100%;
